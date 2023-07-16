@@ -1,0 +1,92 @@
+if (argc < 6)
+	little_arg(stack_a, stack_b, argc);
+else if (argc < 101)
+	ft_big_algo(stack_a, stack_b , 15)
+else
+	ft_big_algo(stack_a, stack_a, 30)
+
+
+pour le big algo : 
+ 
+indexe tes valeurs dans ta stack a (avant d'appeler l'algo)
+
+step 1 : 
+push dans stack_b if index < 15 et apres chaque push dans b 15++;
+qund tu push une valeur faire "if (stack_a->index) < len(stack_b) faire rrb;
+
+faire ca en boucle jusqua avoir tout push dans b;
+
+step 2 : 
+faire une function qui trouve le max dans stack_b->data une autre qui donne sa position actuel dans la stack_b;
+while (stack_b)
+{
+	if (stack_b->data = max)
+		pa;
+
+	else if (position du max < len(stack_b 
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	0
+	 2))
+		ra;
+	else if (position du max > len(stack_b) / 2))
+		rra;
+
+kortolan
+kigo0
+
+
+
+
