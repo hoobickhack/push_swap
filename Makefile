@@ -1,10 +1,9 @@
-SRCS =  main.c so_long_utils.c checkerror.c fonction.c checkpass.c jeu.c jeu2.c \
-		jeu3.c \
+SRCS =  main.c parsing.c \
 
 OBJS = ${SRCS:.c=.o}
 NAME = push_swap
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g3
+CFLAGS = -Wall -Wextra -Werror
 RM = rm -rf
 LIBFT = ./libft
 
@@ -44,7 +43,7 @@ ${NAME}: ${OBJS}
 clean:
 
 	@${MAKE} clean -C ${LIBFT}
-	@${RM} ${OBJS_MAIN} ${OBJS_B}
+	@${RM} ${OBJS} 
 	@echo "${ORANGE}${GRAS}\tNETTOYAGE 🛁${RESET}"
 	@echo "${DARKBLUE}${ITALIQUE} -les fichiers sont supprimés${RESET}"
 

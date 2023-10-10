@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putinnbr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isouaidi <isouaidi@student.42nice.fr>      +#+  +:+       +#+        */
+/*   By: ilyes <ilyes@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 16:32:55 by isouaidi          #+#    #+#             */
-/*   Updated: 2023/04/13 16:23:27 by isouaidi         ###   ########.fr       */
+/*   Updated: 2023/08/01 18:28:02 by ilyes            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ int	incountnbr(unsigned int n)
 	unsigned int	count;
 
 	count = 0;
-	if (n < 0)
-		count ++;
 	if (!n)
 		return (1);
 	while (n)

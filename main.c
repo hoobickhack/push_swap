@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ilyes <ilyes@student.42.fr>                +#+  +:+       +#+        */
+/*   By: isouaidi <isouaidi@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/28 16:20:31 by isouaidi          #+#    #+#             */
-/*   Updated: 2023/08/01 18:24:45 by ilyes            ###   ########.fr       */
+/*   Created: 2023/08/21 14:53:07 by isouaidi          #+#    #+#             */
+/*   Updated: 2023/09/06 23:05:13 by isouaidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-void	ft_bzero(void *s, size_t n)
+int	main(int ac, char **av)
 {
-	size_t	i;
-	char	*str;
+	int	i;
 
-	i = 0;
-	str = s;
-	while (i < n)
+	i = 1;
+	while (i < ac)
 	{
-		str[i] = '\0';
+		checkav(av[i]);
+		checkneg(av[i]);
+		ft_printf("%s", av[i]);
 		i++;
 	}
+	checkdouble(ac, av);
 }

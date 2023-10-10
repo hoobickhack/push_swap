@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isouaidi <isouaidi@student.42nice.fr>      +#+  +:+       +#+        */
+/*   By: ilyes <ilyes@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 15:53:16 by isouaidi          #+#    #+#             */
-/*   Updated: 2023/06/05 18:27:02 by isouaidi         ###   ########.fr       */
+/*   Updated: 2023/08/01 18:27:16 by ilyes            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ char	*read_all(int fd, char *save)
 
 char	*get_next_line_bonus(int fd)
 {
-	char static	*save[OPEN_MAX];
+	static char	*save[65534];
 	char		*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
