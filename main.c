@@ -14,6 +14,7 @@
 
 int	main(int ac, char **av)
 {
+
 	int	i;
 
 	i = 1;
@@ -24,5 +25,8 @@ int	main(int ac, char **av)
 		ft_printf("%s", av[i]);
 		i++;
 	}
-	checkdouble(ac, av);
+	t_stack *sta = NULL;
+
+	if (sta == NULL)
+	ft_printf("ok");
 }

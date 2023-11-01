@@ -28,7 +28,7 @@ void	checkav(char *av)
 	i = 0;
 	while (av[i])
 	{
-		if (!(av[i] >= '0' && av[i] <= '9') && (!(av[i] == ' ')) 
+		if (!(av[i] >= '0' && av[i] <= '9') && (!(av[i] == ' '))
 			&& (!(av[i] == '-') && (!(av[i] == '+'))))
 			writeerreur(1);
 		i++;
@@ -49,7 +49,7 @@ void	checkneg(char *av)
 		i++;
 	}
 }
-
+/*
 void	checkdouble(int ac, char **av)
 {
 	int	val;
@@ -71,8 +71,9 @@ void	checkdouble(int ac, char **av)
 		}
 	}
 }
+*/
 
-t_stack	pushstack(t_stack st, int x);
+/*t_stack	pushstack(stack st, int x);
 {
 	int	i;
 
@@ -83,9 +84,8 @@ t_stack	pushstack(t_stack st, int x);
 	element->next = st;
 	i++;
 	return (element);
-	
 }
-
+*/
 /*void separgu(char **av)
 {
 	int i;

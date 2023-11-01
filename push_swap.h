@@ -24,13 +24,13 @@
 typedef struct s_stack
 {
 	int						val;
-	struct stackElement		*next;
+	struct s_stack		*next;
 }	t_stack;
 
-void	checkdouble(int ac, char **av);
 void	checkav(char *av);
 int		main(int ac, char **av);
 void	writeerreur(int a);
 void	checkneg(char *av);
 t_stack	pushstack(t_stack st, int x);
+
 #endif
