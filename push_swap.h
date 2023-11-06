@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isouaidi <isouaidi@student.42nice.fr>      +#+  +:+       +#+        */
+/*   By: ilyes <ilyes@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 19:13:08 by isouaidi          #+#    #+#             */
-/*   Updated: 2023/09/27 21:46:55 by isouaidi         ###   ########.fr       */
+/*   Updated: 2023/11/06 18:33:30 by ilyes            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,17 @@
 
 typedef struct s_stack
 {
+	unsigned int			index;
 	int						val;
-	struct s_stack		*next;
+	struct s_stack			*next;
 }	t_stack;
 
 void	checkav(char *av);
 int		main(int ac, char **av);
 void	writeerreur(int a);
 void	checkneg(char *av);
-t_stack	pushstack(t_stack st, int x);
+t_stack	*pushstack(t_stack *st, int x);
+void	clearstack(t_stack *st);
+void	printstack(t_stack *st);
 
 #endif
