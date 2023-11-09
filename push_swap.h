@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ilyes <ilyes@student.42.fr>                +#+  +:+       +#+        */
+/*   By: isouaidi <isouaidi@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/13 19:13:08 by isouaidi          #+#    #+#             */
-/*   Updated: 2023/11/06 18:33:30 by ilyes            ###   ########.fr       */
+/*   Created: 2023/11/07 15:55:56 by isouaidi          #+#    #+#             */
+/*   Updated: 2023/11/08 18:25:56 by isouaidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,7 @@ void	checkneg(char *av);
 t_stack	*pushstack(t_stack *st, int x);
 void	clearstack(t_stack *st);
 void	printstack(t_stack *st);
+void	allstack(t_stack *st, int ac, char **av);
+void	fparsing(int i, int ac, char **av);
 
 #endif

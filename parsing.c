@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ilyes <ilyes@student.42.fr>                +#+  +:+       +#+        */
+/*   By: isouaidi <isouaidi@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/21 13:49:11 by isouaidi          #+#    #+#             */
-/*   Updated: 2023/11/06 18:48:31 by ilyes            ###   ########.fr       */
+/*   Created: 2023/11/07 15:56:04 by isouaidi          #+#    #+#             */
+/*   Updated: 2023/11/09 20:04:25 by isouaidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	writeerreur(int a)
 		ft_printf("Error\n check - or +");
 	if (a == 3)
 		ft_printf("Error\n check your malloc in stack");
+	if (a == 4)
+		ft_printf("Error\n check your pairs");
 	exit(1);
 }
 
@@ -44,45 +46,41 @@ void	checkneg(char *av)
 	i = 0;
 	while (av[i])
 	{
+		if (av[i] == '-' && (!(av[i + 1] >= '0' && av[i + 1] <= '9')))
+			writeerreur(2);
+		if (av[i] == '+' && (!(av[i + 1] >= '0' && av[i + 1] <= '9')))
+			writeerreur(2);
 		if (av[i] == '-' && av[i + 1] == '-')
 			writeerreur(2);
 		if (av[i] == '+' && av[i + 1] == '+')
+			writeerreur(2);
+		if (av[i] == '+' && (av[i + 1] >= '0' && av[i + 1] <= '9')
+			&& (av[i - 1] >= '0' && av[i - 1] <= '9'))
+			writeerreur(2);
+		if (av[i] == '-' && (av[i + 1] >= '0' && av[i + 1] <= '9')
+			&& (av[i - 1] >= '0' && av[i - 1] <= '9'))
 			writeerreur(2);
 		i++;
 	}
 }
 
-t_stack	*pushstack(t_stack *st, int x)
+void	fparsing(int i, int ac, char **av)
 {
-	t_stack	*element;
+	int	j;
 
-	element = malloc (sizeof(t_stack));
-	if (element == NULL)
-		writeerreur(3);
-	element->val = x;
-	element->next = st;
-	return (element);
-}
-
-void	clearstack(t_stack *st)
-{
-	t_stack	*element;
-	while (st)
+	while (i < ac)
 	{
-		element = st;
-		st = st->next;
-		free(element);
+		j = i + 1;
+		checkav(av[i]);
+		checkneg(av[i]);
+		//ft_printf("%s\n", av[i]);
+		while (j < ac)
+		{
+			if (ft_atoi(av[j]) == ft_atoi(av[i]))
+				writeerreur(4);
+			j++;
+		}
+		j++;
+		i++;
 	}
-}
-
-void	printstack(t_stack *st)
-{
-	if (st == NULL)
-		return ;
-	while (st->next != NULL)
-	{
-		ft_printf("%d\n", st->val);
-		st = st->next;
-	}
-	printf("\n");
 }
