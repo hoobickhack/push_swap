@@ -6,7 +6,7 @@
 /*   By: isouaidi <isouaidi@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:56:15 by isouaidi          #+#    #+#             */
-/*   Updated: 2023/11/11 19:12:48 by isouaidi         ###   ########.fr       */
+/*   Updated: 2023/11/11 20:37:19 by isouaidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,13 @@ int	main(int ac, char **av)
 	t_stack	*stack_a;
 	//t_stack	*stb;
 
-	i = 1;
-	arg = fparsing(i, ac, av);
+	arg = fparsing(0, ac, av);
 	checkpairs(arg);
 	stack_a = malloc (sizeof(t_stack));
 	stack_a->next = NULL;
 	allstack(stack_a, arg);
+	i = 0;
+	while (arg[i])
+		free(arg[i++]);
 	free(arg);
 }

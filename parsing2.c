@@ -6,13 +6,13 @@
 /*   By: isouaidi <isouaidi@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 01:54:40 by isouaidi          #+#    #+#             */
-/*   Updated: 2023/11/11 15:05:51 by isouaidi         ###   ########.fr       */
+/*   Updated: 2023/11/11 20:23:21 by isouaidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-char	*mostrjoin(char const *s1, char const *s2)
+char	*mostrjoin(char *s1, char *s2)
 {
 	int		i;
 	int		c;
@@ -29,6 +29,7 @@ char	*mostrjoin(char const *s1, char const *s2)
 		i++;
 	}
 	result[i++] = ' ';
+	free(s1);
 	while (s2[c])
 	{
 		result[i] = s2[c];

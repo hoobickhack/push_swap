@@ -6,7 +6,7 @@
 /*   By: isouaidi <isouaidi@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:56:04 by isouaidi          #+#    #+#             */
-/*   Updated: 2023/11/11 19:16:49 by isouaidi         ###   ########.fr       */
+/*   Updated: 2023/11/11 20:35:48 by isouaidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,21 +67,17 @@ void	checkneg(char *av)
 char	**fparsing(int i, int ac, char **av)
 {
 	char	*str;
-	char	*cpy;
 	char	**arg;
 
-	str = " ";
-	while (i < ac)
+	str = ft_strdup("");
+	while (++i < ac)
 	{
 		checkav(av[i]);
 		checkneg(av[i]);
 		str = mostrjoin(str, av[i]);
-		i++;
 	}
-	cpy = ft_strdup(str);
+	arg = ft_split(str, ' ');
 	free(str);
-	arg = ft_split(cpy, ' ');
-	free(cpy);
 	return (arg);
 }
 
