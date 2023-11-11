@@ -6,7 +6,7 @@
 /*   By: isouaidi <isouaidi@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:56:04 by isouaidi          #+#    #+#             */
-/*   Updated: 2023/11/09 20:04:25 by isouaidi         ###   ########.fr       */
+/*   Updated: 2023/11/11 17:39:22 by isouaidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,23 +64,39 @@ void	checkneg(char *av)
 	}
 }
 
-void	fparsing(int i, int ac, char **av)
+char	**fparsing(int i, int ac, char **av)
 {
-	int	j;
+	char	*str;
+	char	**arg;
 
+	str = " ";
 	while (i < ac)
 	{
-		j = i + 1;
 		checkav(av[i]);
 		checkneg(av[i]);
-		//ft_printf("%s\n", av[i]);
-		while (j < ac)
+		str = mostrjoin(str, av[i]);
+		i++;
+	}
+	arg = ft_split(str, ' ');
+	free(str);
+	return (arg);
+}
+
+void	checkpairs(char **arg)
+{
+	int	i;
+	int	j;
+
+	i = -1;
+	while (arg[++i])
+	{
+		j = i + 1;
+		while (arg[j])
 		{
-			if (ft_atoi(av[j]) == ft_atoi(av[i]))
+			if (ft_atoi(arg[j]) == ft_atoi(arg[i]))
 				writeerreur(4);
 			j++;
 		}
 		j++;
-		i++;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: isouaidi <isouaidi@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:55:56 by isouaidi          #+#    #+#             */
-/*   Updated: 2023/11/08 18:25:56 by isouaidi         ###   ########.fr       */
+/*   Updated: 2023/11/11 01:35:31 by isouaidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,9 @@ void	checkneg(char *av);
 t_stack	*pushstack(t_stack *st, int x);
 void	clearstack(t_stack *st);
 void	printstack(t_stack *st);
-void	allstack(t_stack *st, int ac, char **av);
-void	fparsing(int i, int ac, char **av);
+void	allstack(t_stack *st, char **av);
+char	**fparsing(int i, int ac, char **av);
+char	*mostrjoin(char const *s1, char const *s2);
+void	checkpairs(char **arg);
 
 #endif

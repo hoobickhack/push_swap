@@ -1,9 +1,9 @@
-SRCS =  main.c parsing.c stack.c \
+SRCS =  main.c parsing.c stack.c parsing2.c \
 
 OBJS = ${SRCS:.c=.o}
 NAME = push_swap
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g3
 RM = rm -rf
 LIBFT = ./libft
 

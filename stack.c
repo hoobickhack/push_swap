@@ -6,7 +6,7 @@
 /*   By: isouaidi <isouaidi@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:55:26 by isouaidi          #+#    #+#             */
-/*   Updated: 2023/11/09 20:19:36 by isouaidi         ###   ########.fr       */
+/*   Updated: 2023/11/11 01:59:50 by isouaidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,21 +45,16 @@ void	printstack(t_stack *st)
 		ft_printf("%d\n", st->val);
 		st = st->next;
 	}
-	printf("\n");
+	//printf("\n");
 }
 
-void	allstack(t_stack *st, int ac, char **av)
+void	allstack(t_stack *st, char **av)
 {
 	int	i;
 
-	i = 1;
-	while (i < ac)
-	{
-		//ft_printf("%dfirstvaleurinstack\n", st->val);
+	i = -1;
+	while (av[++i])
 		st = pushstack(st, ft_atoi(av[i]));
-		//ft_printf("%dvaleurinstack\n", st->val);
-		i++;
-	}
 	printstack(st);
 	clearstack(st);
 }
