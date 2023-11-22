@@ -6,13 +6,13 @@
 /*   By: isouaidi <isouaidi@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 19:22:08 by isouaidi          #+#    #+#             */
-/*   Updated: 2023/04/05 19:34:08 by isouaidi         ###   ########.fr       */
+/*   Updated: 2023/11/22 00:19:12 by isouaidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+t_stacki	*ft_lstlast(t_stacki *lst)
 {
 	while (lst)
 	{

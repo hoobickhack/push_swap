@@ -6,15 +6,15 @@
 /*   By: isouaidi <isouaidi@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 13:03:23 by isouaidi          #+#    #+#             */
-/*   Updated: 2023/04/06 16:16:46 by isouaidi         ###   ########.fr       */
+/*   Updated: 2023/11/22 00:19:03 by isouaidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_stacki **lst, t_stacki *new)
 {
-	t_list	*last;
+	t_stack	*last;
 
 	if (*lst)
 	{
