@@ -6,7 +6,7 @@
 /*   By: isouaidi <isouaidi@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 16:05:30 by isouaidi          #+#    #+#             */
-/*   Updated: 2023/11/22 00:26:39 by isouaidi         ###   ########.fr       */
+/*   Updated: 2023/12/03 19:56:27 by isouaidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdio.h>
 # include <string.h>
 # include <stdlib.h>
+# include <limits.h>
 
 int		ft_atoi(const char *str);
 size_t	ft_strlen(const	char *str);
@@ -52,5 +53,6 @@ char	*ft_itoa(int n);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	**ft_split(char const *s, char c);
+void	writeerreur1(int a);
 
 #endif

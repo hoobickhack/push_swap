@@ -6,7 +6,7 @@
 /*   By: isouaidi <isouaidi@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:56:04 by isouaidi          #+#    #+#             */
-/*   Updated: 2023/11/11 20:35:48 by isouaidi         ###   ########.fr       */
+/*   Updated: 2023/12/02 19:03:21 by isouaidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ void	writeerreur(int a)
 		ft_printf("Error\n check your malloc in stack");
 	if (a == 4)
 		ft_printf("Error\n check your pairs");
+	if (a == 5)
+		ft_printf("Error\n check int max or int min");
 	exit(1);
 }
 
@@ -64,23 +66,6 @@ void	checkneg(char *av)
 	}
 }
 
-char	**fparsing(int i, int ac, char **av)
-{
-	char	*str;
-	char	**arg;
-
-	str = ft_strdup("");
-	while (++i < ac)
-	{
-		checkav(av[i]);
-		checkneg(av[i]);
-		str = mostrjoin(str, av[i]);
-	}
-	arg = ft_split(str, ' ');
-	free(str);
-	return (arg);
-}
-
 void	checkpairs(char **arg)
 {
 	int	i;
@@ -98,4 +83,22 @@ void	checkpairs(char **arg)
 		}
 		j++;
 	}
+}
+
+char	**fparsing(int i, int ac, char **av)
+{
+	char	*str;
+	char	**arg;
+
+	str = ft_strdup("");
+	while (i < ac)
+	{
+		checkav(av[i]);
+		checkneg(av[i]);
+		str = mostrjoin(str, av[i]);
+		i++;
+	}
+	arg = ft_split(str, ' ');
+	free(str);
+	return (arg);
 }

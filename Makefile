@@ -1,4 +1,5 @@
-SRCS =  main.c parsing.c stack.c parsing2.c mouv.c \
+SRCS =  main.c parsing.c stack.c utils.c mouv.c strie.c strie2.c strie3.c \
+		bigalgo.c \
 
 OBJS = ${SRCS:.c=.o}
 NAME = push_swap
