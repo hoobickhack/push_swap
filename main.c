@@ -6,7 +6,7 @@
 /*   By: isouaidi <isouaidi@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:56:15 by isouaidi          #+#    #+#             */
-/*   Updated: 2023/12/07 20:12:13 by isouaidi         ###   ########.fr       */
+/*   Updated: 2023/12/07 22:43:02 by isouaidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,6 @@ int	main(int ac, char **av)
 	stack_b = NULL;
 	check_stack(arg);
 	allstack(&stack_a, &stack_b, &truct);
-	free(truct.tab);
-	free(truct.tab2);
 	clearstack(&stack_a);
 	clearstack(&stack_b);
 }

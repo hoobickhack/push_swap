@@ -6,7 +6,7 @@
 /*   By: isouaidi <isouaidi@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:55:26 by isouaidi          #+#    #+#             */
-/*   Updated: 2023/12/07 22:26:46 by isouaidi         ###   ########.fr       */
+/*   Updated: 2023/12/07 22:40:33 by isouaidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,4 +67,6 @@ void	allstack(t_stack **st, t_stack **st2, t_truct *truct)
 		smalalgo(*(&st),*(&st2), truct);
 	else
 		bigalgo(*(&st),*(&st2), truct, 0);
+	free(truct->tab);
+	free(truct->tab2);
 }
