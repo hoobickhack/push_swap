@@ -6,7 +6,7 @@
 /*   By: isouaidi <isouaidi@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:56:15 by isouaidi          #+#    #+#             */
-/*   Updated: 2023/12/07 22:43:02 by isouaidi         ###   ########.fr       */
+/*   Updated: 2023/12/11 17:52:20 by isouaidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ int	main(int ac, char **av)
 	t_truct	truct;
 
 	arg = fparsing(1, ac, av);
-	truct.tab = convertir_tab(arg, &truct);
 	truct.tab2 = convertir_tab(arg, &truct);
+	truct.tab = convertir_tab(arg, &truct);
 	beforetrie(&truct, 0);
 	stack_a = NULL;
 	stack_b = NULL;

@@ -6,7 +6,7 @@
 /*   By: isouaidi <isouaidi@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:55:56 by isouaidi          #+#    #+#             */
-/*   Updated: 2023/12/07 22:25:11 by isouaidi         ###   ########.fr       */
+/*   Updated: 2023/12/11 18:07:30 by isouaidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,6 @@ t_stack	*index52(t_stack**st);
 void	smalalgo(t_stack **st, t_stack **st2, t_truct *truct);
 void	bigalgo(t_stack **st, t_stack **st2, t_truct *truct, int i);
 void	algo(int i, t_stack **st, t_stack **st2, int size);
+int		goodpush(t_truct *truct);
 
 #endif

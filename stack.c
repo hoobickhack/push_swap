@@ -6,7 +6,7 @@
 /*   By: isouaidi <isouaidi@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:55:26 by isouaidi          #+#    #+#             */
-/*   Updated: 2023/12/07 22:40:33 by isouaidi         ###   ########.fr       */
+/*   Updated: 2023/12/11 18:23:36 by isouaidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ void	printstack(t_stack *st)
 void	allstack(t_stack **st, t_stack **st2, t_truct *truct)
 {
 	int	i;
+	int	c;
 
 	i = 0;
 	while (i < truct->sizet)
@@ -62,11 +63,15 @@ void	allstack(t_stack **st, t_stack **st2, t_truct *truct)
 		*st = pushstack(*(&st), truct->tab2[i]);
 		i++;
 	}
+	c = goodpush(truct);
 	indexst(*st, truct, 0, 0);
-	if (truct -> sizet < 6)
-		smalalgo(*(&st),*(&st2), truct);
-	else
-		bigalgo(*(&st),*(&st2), truct, 0);
+	if (c == 0)
+	{
+		if (truct -> sizet < 6)
+			smalalgo(*(&st),*(&st2), truct);
+		else
+			bigalgo(*(&st),*(&st2), truct, 0);
+	}
 	free(truct->tab);
 	free(truct->tab2);
 }
