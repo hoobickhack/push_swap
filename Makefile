@@ -37,13 +37,13 @@ ${MAIN_PATH}%.o:%.c .
 all : ${NAME}
 
 ${NAME}: ${OBJS}
-	@${MAKE} -C ${LIBFT}/
+	@${MAKE} --silent -C ${LIBFT}/
 	@${CC} ${CFLAGS} ${OBJS} ${LIBFT}/libft.a -o ${NAME}
 	@echo "\n\n\n ${GRAS}${RED}PUSH_SWAP EST COMPILÉ 👏${RESET}\n"
 	
 clean:
 
-	@${MAKE} clean -C ${LIBFT}
+	@${MAKE} --silent clean -C ${LIBFT}
 	@${RM} ${OBJS} 
 	@echo "${ORANGE}${GRAS}\tNETTOYAGE 🛁${RESET}"
 	@echo "${DARKBLUE}${ITALIQUE} -les fichiers sont supprimés${RESET}"

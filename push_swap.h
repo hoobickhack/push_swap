@@ -6,7 +6,7 @@
 /*   By: isouaidi <isouaidi@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:55:56 by isouaidi          #+#    #+#             */
-/*   Updated: 2023/12/11 18:07:30 by isouaidi         ###   ########.fr       */
+/*   Updated: 2024/01/27 21:41:57 by isouaidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,6 @@ void	beforetrie(t_truct *truct, int i);
 void	indexst(t_stack *st, t_truct *truct, int i, int c);
 int		ft_inlen(int *tab);
 t_stack	*index2(t_stack **st);
-// void	annoncetrie2(t_stack *st, t_stack *st2, int a);
-// void	annoncetrie(t_stack *st, t_stack *st2, int a)
 t_stack	*index3(t_stack **st);
 t_stack	*index31(t_stack **st);
 t_stack	*index4(t_stack **st, t_stack **st2, t_truct *truct);
