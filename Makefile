@@ -26,7 +26,7 @@ NBR_COMPILER = ${shell expr 100 \* ${FICH_COUNT} / ${NBR_TOT_FICHIER}}
 BAR =  ${shell expr 23 \* ${FICH_COUNT} / ${NBR_TOT_FICHIER}}
 
 
-${MAIN_PATH}%.o:%.c .
+${MAIN_PATH}%.o:%.c
 	@${eval FICH_COUNT = ${shell expr ${FICH_COUNT} + 1}}
 	@${CC} ${CFLAGS} -c -I . $< -o ${<:.c=.o}
 	@echo ""
